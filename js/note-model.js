@@ -1,15 +1,26 @@
-
 (function(exports) {
-  function Notebook(string) {
-    this.note = string 
+
+  let Note = function(text) {
+    this.text = text
+  };
+  let NoteBook = function() {
     this.storage = []
   };
 
-  Notebook.prototype.returnNote = function(){ return this.note }
-  Notebook.prototype.returnStorage = function(){ return this.storage }
-  Notebook.prototype.save = function(){ this.storage.push(this.note)}
-  Notebook.prototype.insertNote = function(string){ this.storage.push(string) }
-  Notebook.prototype.loadHTML = function(){}
+  NoteBook.prototype.saveNotes = function(notes){ this.storage.push(notes) }
+  NoteBook.prototype.converttoHTML = function(){
+    console.log(this.storage)
+    let el = this.storage.map(function(val){return val.text})
+    let a = el.join("</div></li><li><div>")
+    return `<ul><li><div>${a}</div></li></ul>`
+  }
+  
+  Note.prototype.notes = function(){ return this.text }
+  
+  exports.newNote = Note
+  exports.newNoteBook = NoteBook
 
-  exports.Notebook = Notebook; 
- })(this); 
+})(this);
+
+new newNoteBook
+new newNote("some random text")

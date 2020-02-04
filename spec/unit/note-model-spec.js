@@ -1,54 +1,37 @@
-'use strict'; 
+function testIsString(){
+  let n = new newNote("Hello World")
+  let t = n.text
+  assert.isTrue(typeof t === 'string')
+  assert.isTrue(n.text === "Hello World")
+};
+testIsString();
 
-(function specNote(exports){
-  function testIfNoteExist() {
-    var notebook = new Notebook("");
-      assert.isTrue(notebook.note == "")
+function testHasArray(){
+  let noteBook = new newNoteBook
+  let notes = noteBook.storage
+  let notesArray = []
+  assert.isTrue(typeof notes === 'object')
+};
+testHasArray();
 
-    var a = notebook.note
-    var b = []    
-    assert.isTrue(a == b)
-  }
-  testIfNoteExist()
+function teststoresNotesInArray(){
+  let noteBook = new newNoteBook
+  let note = "some random note to test"
+  noteBook.saveNotes(note)
+  let n = noteBook.storage
+  assert.isTrue(n[0] === "some random note to test")
+};
+teststoresNotesInArray();
 
-  function callsNoteString() { 
-    var notebook = new Notebook("My favourite language is Javacript"); 
-    assert.isTrue(notebook.returnNote() === "My favourite language is Javacript") 
-  }
-  callsNoteString()
-
-  function testIfSave(){
-    let notebook = new Notebook("My favourite language is Javacript")
-    notebook.save()
-    assert.isTrue(notebook.returnNote() == ["My favourite language is Javacript"])
-  }
-  testIfSave()
-
-  function testReturnStorage(){
-    let notebook = new Notebook("")
-    notebook.save()
-    let b = notebook.storage
-    assert.isTrue(notebook.returnStorage() == b )
-    }
-  
-  testReturnStorage()
-
-  function testInsertNote(){
-    var notebook = new Notebook("")
-    notebook.insertNote("My favourite language is Javacript")
-    let a = notebook.storage[notebook.storage.length-1]
-    let b = "My favourite language is Javacript"
-    assert.isTrue(a == b)
-  }
-  testInsertNote()
-
-  function testloadHTML() {
-    var notebook = new Notebook("Show me some stuff")
-    notebook.save()
-    notebook.insertNote("Second Note")
-    assert.isTrue(notebook.loadHTML() === "<ul><li><div>Show me some stuff</div></li><li><div>Second Note</div></li></ul>")
-    // map all list together with <li><div>thing</li></div> the join() back into an array then add in <ul>+array+</ul>
-  }
-  testloadHTML()
-
-})(this);
+function testconverttoHTML(){
+  let noteBook = new newNoteBook
+  let note = new newNote("Some Random note")
+  let note2 = new newNote("Another Random note")
+  noteBook.saveNotes(note)
+  noteBook.saveNotes(note2)
+  console.log(noteBook.storage[0].text)
+  console.log(noteBook.converttoHTML())
+  n = "<ul><li><div>Some Random note</div></li><li><div>Another Random note</div></li></ul>"
+  assert.isTrue(noteBook.converttoHTML() === n )
+};
+testconverttoHTML()
