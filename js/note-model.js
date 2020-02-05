@@ -22,5 +22,5 @@
 
 })(this);
 
-new newNoteBook
-new newNote("some random text")
+// exports.new newNoteBook
+// new newNote("some random text")
