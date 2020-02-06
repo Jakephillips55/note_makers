@@ -14,9 +14,12 @@ function testconvertToHTML(){
 (function testInsert() {
     var noteController = new NoteController()
     noteController.saveInsert('testOne')
+    noteController.saveInsert('test test test test test test test')
     mockElement()
     noteController.insertion("app")
     assert.isTrue(document.getElementById("app").innerHTML.includes('testOne'))
+    assert.isTrue(document.getElementById("app").innerHTML.includes('test test test test '))
+
     console.log('testInsert passing') 
   })();
   function mockElement() {

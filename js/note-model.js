@@ -2,10 +2,15 @@
 
   let Note = function(text) {
     this.text = text
+    this.id = null 
   };
-  let NoteBook = function() {
-    this.storage = []
-  };
+
+
+
+  // let NoteBook = function() {
+  //   this.storage = []
+  // };
+
 
   // NoteBook.prototype.saveNotes = function(notes){ 
   //   this.storage.push(notes) 
@@ -27,7 +32,7 @@
   // Note.prototype.notes = function(){ return this.text }
   
   exports.Note = Note
-  exports.NoteBook = NoteBook
+  // exports.NoteBook = NoteBook
 
 })(this);
 
