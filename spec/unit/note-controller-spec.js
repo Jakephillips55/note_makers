@@ -24,8 +24,32 @@ function testconvertToHTML(){
     testApp.id = "test"
   };
   
+
+//   (function testInsert() {
+//     var noteController = new NoteController()
+//     noteController.addNote('Asia')
+//     // mockElement()
+//     var fakeDiv = {
+//       innerHTML: ""
+//     }
+//     var fakeDocument = {
+//       getElementById: function(){
+//         return fakeDiv
+//       }
+//     }
+//     // console.log(document.getElementById("test").innerHTML)
+//     noteController.insert("test", fakeDocument)
+//     assert.isTrue(fakeDiv.innerHTML.includes('Asia'))
+//     // console.log('testInsert passing') 
+//     // console.log(document.getElementById("test").innerHTML)
+//   })();
   
-  
-  
+// NoteController.prototype.insert = function(id, doc = document) {
+//     var message = this.viewNote()
+//     var element = doc.getElementById(id)
+//     console.log(element);
+//     element.innerHTML = message
+//     console.log("Im inserting")
+//   }
   
   

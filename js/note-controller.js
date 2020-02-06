@@ -2,10 +2,9 @@
 function NoteController(){
     this.note = new Note() 
     this.NoteBook = new NoteBook()
-
+    console.log('this is controller', Note())
 
 }
-
     NoteController.prototype.insertion = function(){
     var text = this.NoteBook.convertToHTML()
     var x = document.getElementById("app");

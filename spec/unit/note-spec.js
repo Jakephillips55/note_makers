@@ -1,3 +1,4 @@
+
 function testIsString(){
   let n = new Note("Hello World")
   let t = n.text
@@ -23,4 +24,10 @@ function teststoresNotesInArray(){
 };
 teststoresNotesInArray();
 
-
+function testSingleNotesView(){ 
+  let note = new Note('hello')
+  var sng = new singleNoteView(note) 
+  
+  assert.isTrue(sng.singlise() === "<div>hello</div>")
+}
+testSingleNotesView();
