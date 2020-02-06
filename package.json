@@ -1,0 +1,19 @@
+{
+  "name": "note_makers",
+  "version": "1.0.0",
+  "description": "where I and my rotating pair partner will build a note app using just user stories and challenge targets.",
+  "main": "spec_libary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jakephillips55/note_makers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jakephillips55/note_makers/issues"
+  },
+  "homepage": "https://github.com/Jakephillips55/note_makers#readme"
+}
