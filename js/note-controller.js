@@ -20,8 +20,23 @@ function NoteController(){
         this.id = Object.keys(this.id.length -1)
     }
 
-  exports.NoteController = NoteController
+    makeUrlChange(); 
+    function makeUrlChange() {
+        window.addEventListener('hashchange', showNotePage); 
+    }
 
+    function showNotePage() {
+        showNote(this.NoteBook.storage[getNoteUrl(window.location)])
+    }
+    function getNoteUrl(location) {
+        return location.hash.split("#notes/")[1];
+    }
+
+    function showNote(note){
+        document.getElementById("app").innerHTML = note; 
+    }
+
+    exports.NoteController = NoteController
 
 })(this);
 

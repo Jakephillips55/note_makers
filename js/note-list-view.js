@@ -21,7 +21,7 @@
         var array = ["<ul>"];
         for (let i = 0; i < this.storage.length; i++) {
             var a = this.storage[i];
-            array.push(`<li><div>${a.substring(0,20)}</div></li>`);
+            array.push("<li><div> <a href='#notes/"+i+"' id='" + i + "'  id ='" + i + "'>" + a.substring(0,20) + "</div></li>");
         }
         array.push("</ul>");
 
