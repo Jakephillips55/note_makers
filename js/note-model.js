@@ -2,8 +2,8 @@
 
   let Note = function(text) {
     this.text = text
-    this.id = null 
-  };
+    this.id = 0
+  }  
 
 
 
