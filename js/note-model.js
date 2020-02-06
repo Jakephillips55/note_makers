@@ -14,19 +14,13 @@
   NoteBook.prototype.convertToHTML = function(){
 
 
-    // let el = this.storage.map(function(val){return val.text})
      var array = ['<ul>']
-     console.log(this.storage)
     for(let i = 0; i < this.storage.length; i++){
       var a = this.storage[i]
-      console.log(this.storage)
       array.push(`<li><div>${a}</div></li>`)
-      console.log("this is a", a)
-      console.log("this is not a", this.storage)
     }
     array.push('</ul>')
-    console.log("-------")
-    console.log(array[0])
+    
     return array.join("")
   }
   

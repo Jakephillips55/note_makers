@@ -5,6 +5,7 @@ function NoteController(){
 
 
 }
+
     NoteController.prototype.insertion = function(){
     var text = this.NoteBook.convertToHTML()
     var x = document.getElementById("app");
@@ -17,6 +18,7 @@ function NoteController(){
         console.log(this.NoteBook)
     }
   exports.NoteController = NoteController
+
 
 })(this);
 
